@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 3924344663663886614}
   - component: {fileID: 8035871627404646481}
   - component: {fileID: -2081275655110876862}
+  - component: {fileID: -8044863637028607437}
+  - component: {fileID: 4488289128549423303}
   m_Layer: 0
   m_Name: SurvivorController
   m_TagString: Survivor
@@ -259,6 +261,38 @@ MonoBehaviour:
   slideSpeed:
     min: 16
     max: 18
+--- !u!114 &-8044863637028607437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498368170785993435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 952a87e354b8fbb43a250b85b275aa95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  webTimer: 4
+  freezePlayer: 0
+  webbedMaterial: {fileID: 2100000, guid: 29f6ae854f948bc44a1929152721a9bd, type: 2}
+  defaultMaterial: {fileID: 2100000, guid: 179ceebfde0250c4a8e2b8f403353e0c, type: 2}
+  web: {fileID: 0}
+  frozen: 0
+--- !u!114 &4488289128549423303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498368170785993435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0efe1ed2c572b4c449b8c205f0404535, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TPPoint2: {x: -114, y: -2, z: -216}
+  TPPoint3: {x: 214, y: -2, z: 100}
 --- !u!1 &2504870735385081345
 GameObject:
   m_ObjectHideFlags: 0

@@ -14,8 +14,9 @@ public class HitByWeb : MonoBehaviourPunCallbacks
     public GameObject web;
     public bool frozen;
     PhotonView PV; 
-    float sprintSpeed;
+    float runSpeed;
     float walkSpeed;
+    float crouchSpeed;
 
     private void Start()
     {
@@ -31,16 +32,17 @@ public class HitByWeb : MonoBehaviourPunCallbacks
             Debug.Log("Player is frozen");
 
             //We will change this once the updated player controller is implemented, player should freeze
- /*           sprintSpeed = this.GetComponent<PlayerController>().sprintSpeed;
-            walkSpeed = this.GetComponent<PlayerController>().walkSpeed;*/
+            runSpeed = this.GetComponent<PlayerMovement>().runSpeed;
+            walkSpeed = this.GetComponent<PlayerMovement>().walkSpeed;
+            crouchSpeed = this.GetComponent<PlayerMovement>().crouchSpeed;
 
 
             PV.RPC("changeToWebMaterial", RpcTarget.AllBuffered, true);
-      /*      this.GetComponent<PlayerController>().sprintSpeed = 0;
-            this.GetComponent<PlayerController>().walkSpeed = 0;*/
+            this.GetComponent<PlayerMovement>().runSpeed = 0;
+            this.GetComponent<PlayerMovement>().walkSpeed = 0;
+            this.GetComponent<PlayerMovement>().crouchSpeed = 0;
 
-            if(PV.IsMine)
-                this.GetComponent<Rigidbody>().isKinematic = true; 
+            
             
             freezePlayer = false;
             frozen = true; 
@@ -49,13 +51,13 @@ public class HitByWeb : MonoBehaviourPunCallbacks
         if (Time.time - webTimeTracker > webTimer)
         {
             Debug.Log("Player is unfrozen");
- /*           this.GetComponent<PlayerController>().sprintSpeed = sprintSpeed;
-            this.GetComponent<PlayerController>().walkSpeed = walkSpeed;*/
+            this.GetComponent<PlayerMovement>().runSpeed = runSpeed;
+            this.GetComponent<PlayerMovement>().walkSpeed = walkSpeed;
+            this.GetComponent<PlayerMovement>().crouchSpeed = crouchSpeed;
             PV.RPC("changeToWebMaterial", RpcTarget.AllBuffered, false);
             webTimeTracker = float.PositiveInfinity;
             frozen = false;
-            if (PV.IsMine)
-                this.GetComponent<Rigidbody>().isKinematic = false;
+            
         }
     }
     [PunRPC]
