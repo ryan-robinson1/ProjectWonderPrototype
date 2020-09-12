@@ -17,23 +17,24 @@ public class TeleportPlayer : MonoBehaviourPunCallbacks
     }
     private void OnTriggerEnter(Collider other)
     {
-        
+        setFreeView(other.gameObject);
         if (other.gameObject.name == "SurvivorController(Clone)" && slot.transform.childCount > 0)
         {
-            setFreeView(other.gameObject);
+            
             GameLogicPV.RPC("IncrementPlayersEscaped", RpcTarget.AllBuffered);
         }
         
     }
     public void setFreeView(GameObject player)
     {
-        player.GetComponent<Rigidbody>().isKinematic = true;
+        
         HUD.SetActive(false);
-        player.transform.position = new Vector3(50,50,-95);
+        player.transform.GetChild(0).GetChild(0).GetChild(0).transform.position = new Vector3(50,50,-95);
         player.transform.rotation = Quaternion.identity;
         player.GetComponent<GlobalMeshRemover>().enabled = true; 
-        player.GetComponent<PlayerController>().enabled = false;
-        player.transform.Find("CameraHolder").Find("Camera").GetComponent<SceneView>().enabled = true;
+        player.GetComponent<CharacterController>().enabled = false;
+        player.transform.GetChild(0).GetChild(0).GetChild(0).GetComponent<SceneView>().enabled = true;
+        player.transform.GetChild(0).GetChild(0).GetChild(0).GetComponent<CameraMovement>().enabled = false;
 
     }
  

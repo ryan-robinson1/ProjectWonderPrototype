@@ -278,13 +278,13 @@
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="Photon3Unity3D">
-      <HintPath>C:/Users/ryanr/Desktop/ProjectWonderPrototype/Assets/Photon/PhotonLibs/Photon3Unity3D.dll</HintPath>
+      <HintPath>C:/Users/ryanr/Desktop/Code/Unity/ProjectWonderPrototype/Assets/Photon/PhotonLibs/Photon3Unity3D.dll</HintPath>
     </Reference>
     <Reference Include="websocket-sharp">
-      <HintPath>C:/Users/ryanr/Desktop/ProjectWonderPrototype/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
+      <HintPath>C:/Users/ryanr/Desktop/Code/Unity/ProjectWonderPrototype/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>C:/Users/ryanr/Desktop/ProjectWonderPrototype/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
+      <HintPath>C:/Users/ryanr/Desktop/Code/Unity/ProjectWonderPrototype/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.7f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -647,55 +647,55 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.7f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.TestRunner">
-      <HintPath>C:/Users/ryanr/Desktop/ProjectWonderPrototype/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+      <HintPath>C:/Users/ryanr/Desktop/Code/Unity/ProjectWonderPrototype/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TestRunner">
-      <HintPath>C:/Users/ryanr/Desktop/ProjectWonderPrototype/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+      <HintPath>C:/Users/ryanr/Desktop/Code/Unity/ProjectWonderPrototype/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/ryanr/Desktop/ProjectWonderPrototype/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/ryanr/Desktop/Code/Unity/ProjectWonderPrototype/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProGrids">
-      <HintPath>C:/Users/ryanr/Desktop/ProjectWonderPrototype/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
+      <HintPath>C:/Users/ryanr/Desktop/Code/Unity/ProjectWonderPrototype/Library/ScriptAssemblies/Unity.ProGrids.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/ryanr/Desktop/ProjectWonderPrototype/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/ryanr/Desktop/Code/Unity/ProjectWonderPrototype/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProBuilder">
-      <HintPath>C:/Users/ryanr/Desktop/ProjectWonderPrototype/Library/ScriptAssemblies/Unity.ProBuilder.dll</HintPath>
+      <HintPath>C:/Users/ryanr/Desktop/Code/Unity/ProjectWonderPrototype/Library/ScriptAssemblies/Unity.ProBuilder.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProBuilder.Editor">
-      <HintPath>C:/Users/ryanr/Desktop/ProjectWonderPrototype/Library/ScriptAssemblies/Unity.ProBuilder.Editor.dll</HintPath>
+      <HintPath>C:/Users/ryanr/Desktop/Code/Unity/ProjectWonderPrototype/Library/ScriptAssemblies/Unity.ProBuilder.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
-      <HintPath>C:/Users/ryanr/Desktop/ProjectWonderPrototype/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
+      <HintPath>C:/Users/ryanr/Desktop/Code/Unity/ProjectWonderPrototype/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProGrids.Editor">
-      <HintPath>C:/Users/ryanr/Desktop/ProjectWonderPrototype/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
+      <HintPath>C:/Users/ryanr/Desktop/Code/Unity/ProjectWonderPrototype/Library/ScriptAssemblies/Unity.ProGrids.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/ryanr/Desktop/ProjectWonderPrototype/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/ryanr/Desktop/Code/Unity/ProjectWonderPrototype/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/ryanr/Desktop/ProjectWonderPrototype/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/ryanr/Desktop/Code/Unity/ProjectWonderPrototype/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/ryanr/Desktop/ProjectWonderPrototype/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/ryanr/Desktop/Code/Unity/ProjectWonderPrototype/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/ryanr/Desktop/ProjectWonderPrototype/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/ryanr/Desktop/Code/Unity/ProjectWonderPrototype/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/ryanr/Desktop/ProjectWonderPrototype/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/ryanr/Desktop/Code/Unity/ProjectWonderPrototype/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.ProBuilder.AddOns.Editor">
-      <HintPath>C:/Users/ryanr/Desktop/ProjectWonderPrototype/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
+      <HintPath>C:/Users/ryanr/Desktop/Code/Unity/ProjectWonderPrototype/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/ryanr/Desktop/ProjectWonderPrototype/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/ryanr/Desktop/Code/Unity/ProjectWonderPrototype/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/ryanr/Desktop/ProjectWonderPrototype/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/ryanr/Desktop/Code/Unity/ProjectWonderPrototype/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
