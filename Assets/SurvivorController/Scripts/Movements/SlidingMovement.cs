@@ -7,7 +7,7 @@ using UnityEngine.Events;
 [DisallowMultipleComponent]
 public class SlidingMovement : MovementType
 {
-    public FloatRange slideSpeed = new FloatRange(7.0f, 12.0f);
+    public FloatRange slideSpeed = new FloatRange(60.0f, 64.0f);
     bool controlledSlide;
 
     float slideLimit;

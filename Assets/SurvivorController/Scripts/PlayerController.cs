@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
 {
     public Status status;
     public LayerMask collisionLayer; //Default
-    public float crouchHeight = 1f;
+    public float crouchHeight = 1.5f;
     public PlayerInfo info;
     [SerializeField]
     private float sprintTime = 100000f;

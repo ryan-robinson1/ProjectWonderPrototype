@@ -27,7 +27,7 @@ public class HunterManager : MonoBehaviour
     void CreateController()
     {
         Debug.Log("Instantiated Hunter Controller");
-        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Spider"), new Vector3(-55, 6, -71), Quaternion.identity);
+        PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "Spider"), new Vector3(400, 6, -441), Quaternion.identity);
         PhotonNetwork.SetMasterClient(PhotonNetwork.LocalPlayer);
     }
 }
