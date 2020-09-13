@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using UnityEngine.UI;
+using System;
 
 public class GameScript : MonoBehaviourPunCallbacks
 {
@@ -16,7 +18,8 @@ public class GameScript : MonoBehaviourPunCallbacks
     public int playersEscaped = 0;
     public float timeToEscape = 10f;
     public GameObject powerCrystalSlot1, powerCrystalSlot2;
-    public GameObject teleporter; 
+    public GameObject teleporter;
+    public Text timer; 
     PhotonView PV;
     bool inRoom = true;
 
@@ -36,12 +39,20 @@ public class GameScript : MonoBehaviourPunCallbacks
         if (PowerCrystal.GetComponent<IsRemovedScript>().removed && !switchedToEscape)
         {
             gameState = "Escape";
-            switchedToEscape = true; 
+            switchedToEscape = true;
+            timer.enabled = false;
         }
         else if(gameState == "Escape")
         {
+            timer.enabled = true;
             timeToEscape -= Time.deltaTime;
-            Debug.Log(timeToEscape);
+            TimeSpan t = TimeSpan.FromSeconds(timeToEscape);
+            string timeLeft = string.Format("{0:D2}:{1:D2}",
+                t.Minutes,
+                t.Seconds
+                );
+            timer.text = timeLeft.Substring(1);
+            
             powerCrystalSlot1.tag = "CanPlace";
             powerCrystalSlot2.tag = "CanPlace";
         }

@@ -4,6 +4,7 @@ using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
 using ExitGames.Client.Photon;
+using UnityEngine.UI;
 
 public class CreatureController : MonoBehaviourPunCallbacks, IOnEventCallback {
     public float moveInputFactor = 5f;
@@ -36,6 +37,7 @@ public class CreatureController : MonoBehaviourPunCallbacks, IOnEventCallback {
     public bool grounded = false;
     bool pause = false;
 
+
     public float mouseSensitivity = 40;
     float verticalLookRotation;
     public GameObject head;
@@ -43,6 +45,7 @@ public class CreatureController : MonoBehaviourPunCallbacks, IOnEventCallback {
     public bool disableMovement = false;
     void Start() {
         PV = this.GetComponent<PhotonView>();
+  
         this.tag = "Hunter";
         
         Cursor.lockState = CursorLockMode.None;
@@ -70,6 +73,8 @@ public class CreatureController : MonoBehaviourPunCallbacks, IOnEventCallback {
             pause = true;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+            disableMovement = true;
+         
         }
         else if (Input.GetKeyDown(KeyCode.Escape) && pause)
         {
@@ -77,6 +82,8 @@ public class CreatureController : MonoBehaviourPunCallbacks, IOnEventCallback {
             pause = false;
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
+            disableMovement = false;
+
         }
         if (useAlignment) CalculateOrientation();
 
@@ -84,6 +91,7 @@ public class CreatureController : MonoBehaviourPunCallbacks, IOnEventCallback {
         {
             Move();
             Look();
+            Debug.Log("hello");
         }
 
         if (dynamicGait) {

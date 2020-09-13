@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerInput : MonoBehaviour
 {
+   
     public Vector2 input
     {
         get
@@ -118,6 +119,7 @@ public class PlayerInput : MonoBehaviour
             if (previous.y != 0)
                 _down.y = previous.y;
         }
+       
     }
 
     public void FixedUpdate()

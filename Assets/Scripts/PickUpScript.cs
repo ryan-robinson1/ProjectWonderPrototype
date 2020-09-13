@@ -73,7 +73,7 @@ public class PickUpScript : MonoBehaviourPunCallbacks
 
         
 
-        if (Physics.Raycast(transform.position, transform.forward, out hit, distance))
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 7f))
         {
             if ((hit.transform.tag == "CanGrab" || hit.transform.tag == "OnlyGrab") && !inHand)
             {
@@ -97,7 +97,7 @@ public class PickUpScript : MonoBehaviourPunCallbacks
     private bool CheckPlace()
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit, 3.5f))
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 7f))
         {
             if ((hit.transform.tag == "CanPlace" ) && inHand && currentObject.transform.Find("KeyTag") !=null)
             {
@@ -111,7 +111,7 @@ public class PickUpScript : MonoBehaviourPunCallbacks
     private bool CheckLock()
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit, 5f))
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 7f))
         {
             
             if (hit.transform.tag == "Lock")

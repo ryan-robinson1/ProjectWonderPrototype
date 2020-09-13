@@ -173,6 +173,8 @@ MonoBehaviour:
   desiredSufaceDist: -2
   dist: 0
   grounded: 0
+  pauseMenu: {fileID: 0}
+  UI: {fileID: 0}
   mouseSensitivity: 10
   head: {fileID: 7843834973650140087}
   disableMovement: 0

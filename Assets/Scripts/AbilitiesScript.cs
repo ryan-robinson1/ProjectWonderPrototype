@@ -23,6 +23,8 @@ public class AbilitiesScript : MonoBehaviourPunCallbacks
 
     PhotonView PV;
     float timer = float.PositiveInfinity;
+    public float webShootTimer = 1.5f;
+    float webTimer = 0; 
     public float timeToHold = 2f; 
 
     private void Start()
@@ -35,9 +37,10 @@ public class AbilitiesScript : MonoBehaviourPunCallbacks
     void Update()
     {
 
-        if (Input.GetMouseButtonDown(0) && !this.GetComponentInParent<CreatureController>().disableMovement) 
+        if (Input.GetMouseButtonDown(0) && !this.GetComponentInParent<CreatureController>().disableMovement && Time.time - webTimer > webShootTimer) 
         {
             PV.RPC("ShootWeb", RpcTarget.AllBuffered);
+            webTimer = Time.time;
         }
         if (Input.GetKeyDown(KeyCode.E) && CheckPlayer())
         {
@@ -76,7 +79,7 @@ public class AbilitiesScript : MonoBehaviourPunCallbacks
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, 15f))
         {
-            Debug.Log(hit.transform.gameObject.tag);
+         
            
             if ((hit.transform.tag == "Survivor" && hit.transform.GetComponent<HitByWeb>().frozen))
             {
