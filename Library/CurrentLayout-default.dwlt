@@ -112,10 +112,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 948
-  m_MinSize: {x: 677, y: 492}
-  m_MaxSize: {x: 14001, y: 14042}
+  m_MinSize: {x: 678, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 112
+  controlID: 34
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_MinSize: {x: 402, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 113
+  controlID: 35
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_MinSize: {x: 402, y: 221}
   m_MaxSize: {x: 8002, y: 4021}
   vertical: 0
-  controlID: 114
+  controlID: 36
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -266,8 +266,8 @@ MonoBehaviour:
     y: 0
     width: 516
     height: 948
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -420,10 +420,10 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 732}
-      m_SelectedIDs: ec1ffeff
-      m_LastClickedID: -122900
-      m_ExpandedIDs: f028feffc631feff364ffeff3667feffde76feff5a80feff92a8feff50bcfeff8adafeff7ee5feffa00affffee11ffffc01cffff9247ffff0253ffff40daffff60daffffacefffff3afbffffa46a0000
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: e6c4fbff70cdfbffe2dffbff66e8fbff7227fcff0430fcff689bfcffeaa5fcffb89dfdff70a4fdff24adfdfff6e0fdffbaebfdff5a1ffeff542afeff7c4bfeffcc5efeff0268feffb670feffdc0bfffffe0fffff081bffffa02effff2239ffff2a44ffff364effff0a57ffff8261ffff9e6affffcc7bffff9084ffffda99ffff98a4ffff26b7ffffecc1ffff4ec9ffff1ad2fffffaf2ffff20f3ffff0cfbffff30060200a4240200c2250200682602006e2602000c270200ba280200b25c0200
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -483,9 +483,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -21.332474, y: 55.213634, z: -496.27426}
+    m_Target: {x: 227.66278, y: 30.22034, z: -419.28113}
     speed: 2
-    m_Value: {x: -21.332474, y: 55.213634, z: -496.27426}
+    m_Value: {x: -12.415788, y: 5.898058, z: -45.660984}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -531,13 +531,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.18257654, y: 0.81579053, z: -0.36465245, w: 0.41039538}
+    m_Target: {x: 0.18151428, y: -0.22938903, z: 0.042538527, w: 0.9555094}
     speed: 2
-    m_Value: {x: 0.18495044, y: 0.8134266, z: -0.3679982, w: 0.4107406}
+    m_Value: {x: -0.08900555, y: 0.43253556, z: -0.04297673, w: -0.89618295}
   m_Size:
-    m_Target: -3.37267
+    m_Target: 41.621555
     speed: 2
-    m_Value: -3.67267
+    m_Value: 14.356769
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -601,20 +601,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Maxfi\OneDrive\Desktop\completedPrototype
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 103}
-    m_SelectedIDs: ce3d0000
-    m_LastClickedID: 15822
-    m_ExpandedIDs: 00000000a63d0000cc3d0000d43d0000
+    scrollPos: {x: 0, y: 55}
+    m_SelectedIDs: 384c0000
+    m_LastClickedID: 19512
+    m_ExpandedIDs: 00000000ce4b00003e4c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -642,7 +642,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a63d0000
+    m_ExpandedIDs: 00000000ce4b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -812,8 +812,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1522
-    y: 73
-    width: 1037
-    height: 1286
+    x: 2940
+    y: 72
+    width: 515
+    height: 927
   m_ViewDataDictionary: {fileID: 0}
