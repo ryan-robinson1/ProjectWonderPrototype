@@ -53,13 +53,13 @@ public class AbilitiesScript : MonoBehaviourPunCallbacks
             
 
         }
-        else if ((Input.GetKeyUp(KeyCode.E) && Time.time - timer < timeToHold && timer != float.PositiveInfinity )|| !CheckPlayer())
+        else if ((Input.GetKeyUp(KeyCode.E) && Time.time - timer < timeToHold && timer != float.PositiveInfinity )|| !CheckPlayer() && !this.GetComponentInParent<CreatureController>().disableMovement)
         {
             timer = float.PositiveInfinity;
             this.GetComponentInParent<CreatureController>().enabled = true;
             AnimEPrompt.GetComponent<Image>().enabled = false;
         }
-        else if (Input.GetKey(KeyCode.E) && CheckPlayer())
+        else if (Input.GetKey(KeyCode.E) && CheckPlayer() && !this.GetComponentInParent<CreatureController>().disableMovement)
         {
             Debug.Log(Time.time - timer);
             if (Time.time - timer > timeToHold)

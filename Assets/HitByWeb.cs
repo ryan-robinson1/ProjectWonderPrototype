@@ -25,7 +25,7 @@ public class HitByWeb : MonoBehaviourPunCallbacks
     private void Update()
     {
         
-        if (freezePlayer)
+        if (freezePlayer && !frozen)
         {
             Debug.Log(freezePlayer);
             webTimeTracker = Time.time;
