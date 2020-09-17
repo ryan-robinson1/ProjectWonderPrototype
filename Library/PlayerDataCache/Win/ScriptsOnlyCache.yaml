@@ -6,6 +6,7 @@ ScriptsOnlyBuild:
     - AnimateWalk
     - BarrelTransformUpdater
     - CameraMovement
+    - CameraSmoother
     - CreatureController
     - DitzelGames.FastIK.FastIKFabric
     - GameScript
@@ -37,8 +38,6 @@ ScriptsOnlyBuild:
     - Teleport
     - TeleportPlayer
     - WebCaptureScript
-    PhotonUnityNetworking.Editor.dll:
-    - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonTransformView
     - Photon.Pun.PhotonView
@@ -303,7 +302,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14342}
     - Class: 114
-      Script: {instanceID: 18786}
+      Script: {instanceID: 21274}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -1614,6 +1613,12 @@ ScriptsOnlyBuild:
     className: InterpolationController
   - hash:
       serializedVersion: 2
+      Hash: 84cae84cda756aa36a486ddf2086ed4b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: CameraSmoother
+  - hash:
+      serializedVersion: 2
       Hash: d5630f96bd5a6a6eed7e1754c3fb8703
     assemblyName: Unity.Postprocessing.Runtime.dll
     namespaceName: UnityEngine.Rendering.PostProcessing
@@ -1809,4 +1814,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Game.unity
   - Assets/Scenes/WonderMapPrototype.unity
-  playerPath: C:/Users/ryanr/Desktop/Code/Unity/PWBuilds/ProjectWL.exe
+  playerPath: C:/Users/Maxfi/OneDrive/Desktop/completedPrototype/ProjectWL.exe

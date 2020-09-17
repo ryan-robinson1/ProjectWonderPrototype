@@ -6,7 +6,7 @@ using Photon.Pun;
 
 public class HitByWeb : MonoBehaviourPunCallbacks
 {
-    public float webTimer = 4f;
+    public float webTimer = 5f;
     float webTimeTracker = float.PositiveInfinity;
     public bool freezePlayer = false;
     public Material webbedMaterial;
@@ -14,9 +14,7 @@ public class HitByWeb : MonoBehaviourPunCallbacks
     public GameObject web;
     public bool frozen;
     PhotonView PV; 
-    float runSpeed;
-    float walkSpeed;
-    float crouchSpeed;
+   
 
     private void Start()
     {
@@ -29,31 +27,18 @@ public class HitByWeb : MonoBehaviourPunCallbacks
         {
             Debug.Log(freezePlayer);
             webTimeTracker = Time.time;
-            Debug.Log("Player is frozen");
-
-            //We will change this once the updated player controller is implemented, player should freeze
-            runSpeed = this.GetComponent<PlayerMovement>().runSpeed;
-            walkSpeed = this.GetComponent<PlayerMovement>().walkSpeed;
-            crouchSpeed = this.GetComponent<PlayerMovement>().crouchSpeed;
-
 
             PV.RPC("changeToWebMaterial", RpcTarget.AllBuffered, true);
-            this.GetComponent<PlayerMovement>().runSpeed = 0;
-            this.GetComponent<PlayerMovement>().walkSpeed = 0;
-            this.GetComponent<PlayerMovement>().crouchSpeed = 0;
-
-            
-            
+            // freeze player when hit by web
+            this.GetComponent<PlayerMovement>().controller.enabled = false;
             freezePlayer = false;
             frozen = true; 
            
         }
         if (Time.time - webTimeTracker > webTimer)
         {
-            Debug.Log("Player is unfrozen");
-            this.GetComponent<PlayerMovement>().runSpeed = runSpeed;
-            this.GetComponent<PlayerMovement>().walkSpeed = walkSpeed;
-            this.GetComponent<PlayerMovement>().crouchSpeed = crouchSpeed;
+            // unfreeze player after time expires
+            this.GetComponent<PlayerMovement>().controller.enabled = true;
             PV.RPC("changeToWebMaterial", RpcTarget.AllBuffered, false);
             webTimeTracker = float.PositiveInfinity;
             frozen = false;

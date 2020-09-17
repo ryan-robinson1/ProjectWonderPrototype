@@ -96,7 +96,7 @@ public class PlayerMovement : InterpolatedTransform
         resetVelocity();
 
        // Debug.Log("X: " + moveDirection.z);
-        Debug.Log("Y: " + moveDirection.y);
+       // Debug.Log("Y: " + moveDirection.y);
     }
 
     public override void FixedUpdate()

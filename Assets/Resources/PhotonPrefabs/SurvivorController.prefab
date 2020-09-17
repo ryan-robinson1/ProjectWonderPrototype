@@ -273,7 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 952a87e354b8fbb43a250b85b275aa95, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  webTimer: 4
+  webTimer: 5
   freezePlayer: 0
   webbedMaterial: {fileID: 2100000, guid: 29f6ae854f948bc44a1929152721a9bd, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 179ceebfde0250c4a8e2b8f403353e0c, type: 2}
