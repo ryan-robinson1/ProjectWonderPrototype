@@ -23,9 +23,9 @@ public class AbilitiesScript : MonoBehaviourPunCallbacks
 
     PhotonView PV;
     float timer = float.PositiveInfinity;
-    public float webShootTimer = 0.4f;
+    public float webShootTimer = 0.0f;
     float webTimer = 0; 
-    public float timeToHold = 2f; 
+    public float timeToHold = 1.5f; 
 
     private void Start()
     {
@@ -103,7 +103,7 @@ public class AbilitiesScript : MonoBehaviourPunCallbacks
     {
         GameObject clone;
         clone = Instantiate(webprojectile, barrel.position, barrel.rotation);
-        clone.GetComponent<Rigidbody>().AddForce(barrel.transform.forward * 10000);
+        clone.GetComponent<Rigidbody>().AddForce(barrel.transform.forward * 15000);
 
 
     }

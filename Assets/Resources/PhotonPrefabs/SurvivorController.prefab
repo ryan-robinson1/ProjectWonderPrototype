@@ -213,9 +213,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_lastPositions: []
   m_newTransformIndex: 0
-  walkSpeed: 64
-  runSpeed: 128
-  crouchSpeed: 8
+  walkSpeed: 35
+  runSpeed: 55
+  crouchSpeed: 20
   jumpSpeed: 10
   gravity: 25
   antiBumpFactor: 0.75

@@ -8,9 +8,9 @@ using UnityEngine.Events;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerMovement : InterpolatedTransform
 {
-    public float walkSpeed = 64.0f;
-    public float runSpeed = 128.0f;
-    public float crouchSpeed = 16f;
+    public float walkSpeed = 35f;
+    public float runSpeed = 55f;
+    public float crouchSpeed = 20f;
     [SerializeField]
     private float jumpSpeed = 10.0f;
     [SerializeField]

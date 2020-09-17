@@ -64,7 +64,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\BarrelTransformUpdater.cs" />
-    <Compile Include="Assets\CameraSmoother.cs" />
     <Compile Include="Assets\FastIK\Scripts\FastIK\FastIKCCD.cs" />
     <Compile Include="Assets\FastIK\Scripts\FastIK\FastIKFabric.cs" />
     <Compile Include="Assets\FastIK\Scripts\FastIK\FastIKLook.cs" />
