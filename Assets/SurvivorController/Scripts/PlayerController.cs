@@ -310,7 +310,7 @@ public class PlayerController : MonoBehaviour
 
     public void Crouch(bool setStatus)
     {
-       // movement.controller.height = crouchHeight;
+        movement.controller.height = crouchHeight;
         if(setStatus) ChangeStatus(Status.crouching);
     }
 
@@ -319,7 +319,7 @@ public class PlayerController : MonoBehaviour
         Vector3 bottom = transform.position - (Vector3.up * ((crouchHeight / 2) - info.radius));
         bool isBlocked = Physics.SphereCast(bottom, info.radius, Vector3.up, out var hit, info.height - info.radius, collisionLayer);
         if (isBlocked) return false; //If we have something above us, do nothing and return
-        //movement.controller.height = info.height;
+        movement.controller.height = info.height;
         ChangeStatus(Status.walking);
         return true;
     }
