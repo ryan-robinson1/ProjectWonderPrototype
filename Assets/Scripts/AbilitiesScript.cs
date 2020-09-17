@@ -23,7 +23,7 @@ public class AbilitiesScript : MonoBehaviourPunCallbacks
 
     PhotonView PV;
     float timer = float.PositiveInfinity;
-    public float webShootTimer = 1.5f;
+    public float webShootTimer = 0.4f;
     float webTimer = 0; 
     public float timeToHold = 2f; 
 
@@ -40,6 +40,7 @@ public class AbilitiesScript : MonoBehaviourPunCallbacks
         if (Input.GetMouseButtonDown(0) && !this.GetComponentInParent<CreatureController>().disableMovement && Time.time - webTimer > webShootTimer) 
         {
             PV.RPC("ShootWeb", RpcTarget.AllBuffered);
+            webShootTimer = 0.4f;
             webTimer = Time.time;
         }
         if (Input.GetKeyDown(KeyCode.E) && CheckPlayer())
@@ -77,7 +78,7 @@ public class AbilitiesScript : MonoBehaviourPunCallbacks
     private bool CheckPlayer()
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit, 15f))
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 40f))
         {
          
            
@@ -102,7 +103,7 @@ public class AbilitiesScript : MonoBehaviourPunCallbacks
     {
         GameObject clone;
         clone = Instantiate(webprojectile, barrel.position, barrel.rotation);
-        clone.GetComponent<Rigidbody>().AddForce(barrel.transform.forward * 5000);
+        clone.GetComponent<Rigidbody>().AddForce(barrel.transform.forward * 10000);
 
 
     }

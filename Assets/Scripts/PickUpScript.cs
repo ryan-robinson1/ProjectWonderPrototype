@@ -73,7 +73,7 @@ public class PickUpScript : MonoBehaviourPunCallbacks
 
         
 
-        if (Physics.Raycast(transform.position, transform.forward, out hit, 7f))
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 18f))
         {
             if ((hit.transform.tag == "CanGrab" || hit.transform.tag == "OnlyGrab") && !inHand)
             {
@@ -97,7 +97,7 @@ public class PickUpScript : MonoBehaviourPunCallbacks
     private bool CheckPlace()
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit, 7f))
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 18f))
         {
             if ((hit.transform.tag == "CanPlace" ) && inHand && currentObject.transform.Find("KeyTag") !=null)
             {
@@ -111,7 +111,7 @@ public class PickUpScript : MonoBehaviourPunCallbacks
     private bool CheckLock()
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit, 7f))
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 18f))
         {
             
             if (hit.transform.tag == "Lock")
@@ -168,7 +168,7 @@ public class PickUpScript : MonoBehaviourPunCallbacks
         currentObject.transform.position = placeableSurface.transform.position;
         currentObject.transform.rotation = Quaternion.identity;
         currentObject.transform.parent = null;
-        currentObject.transform.localScale = new Vector3(0.15f, 0.15f, 0.15f);
+        currentObject.transform.localScale = new Vector3(0.35f, 0.35f, 0.35f);
         currentObject.transform.parent = placeableSurface.transform;
         foreach (Transform t in currentObject.transform)
         {

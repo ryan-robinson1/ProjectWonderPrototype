@@ -66,29 +66,30 @@ public class CreatureController : MonoBehaviourPunCallbacks, IOnEventCallback {
     }
 
     void Update() {
-        //Pause system
-        if (Input.GetKeyDown(KeyCode.Escape) && !pause)
-        {
-            Debug.Log("Pause");
-            pause = true;
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-            disableMovement = true;
-         
-        }
-        else if (Input.GetKeyDown(KeyCode.Escape) && pause)
-        {
-            Debug.Log("Unpause");
-            pause = false;
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-            disableMovement = false;
-
-        }
+       
         if (useAlignment) CalculateOrientation();
 
         if (!disableMovement)
         {
+     /*       //Pause system
+            if (Input.GetKeyDown(KeyCode.Escape) && !pause)
+            {
+                Debug.Log("Pause");
+                pause = true;
+                Cursor.lockState = CursorLockMode.None;
+                Cursor.visible = true;
+
+
+            }
+            else if (Input.GetKeyDown(KeyCode.Escape) && pause)
+            {
+                Debug.Log("Unpause");
+                pause = false;
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+
+
+            }*/
             Move();
             Look();
             Debug.Log("hello");

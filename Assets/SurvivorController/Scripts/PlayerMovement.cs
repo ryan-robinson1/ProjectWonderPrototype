@@ -52,6 +52,7 @@ public class PlayerMovement : InterpolatedTransform
         controller = GetComponent<CharacterController>();
         PV = GetComponent<PhotonView>();
         if (!PV.IsMine)
+            Destroy(GetComponentInChildren<Camera>().gameObject);
             Destroy(controller);
     }
 
