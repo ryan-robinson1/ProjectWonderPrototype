@@ -48,7 +48,7 @@ public class CreatureController : MonoBehaviourPunCallbacks, IOnEventCallback {
   
         this.tag = "Hunter";
         
-        Cursor.lockState = CursorLockMode.None;
+        Cursor.lockState = CursorLockMode.Locked;
         for (int i = 0; i < legs.Length; i++) {
             averageRotationRadius += legs[i].restingPosition.z;
         }
