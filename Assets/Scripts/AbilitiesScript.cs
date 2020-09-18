@@ -42,6 +42,8 @@ public class AbilitiesScript : MonoBehaviourPunCallbacks
         checkPlayer = colliderSphere.GetComponent<ColliderScript>().checkPlayer;
         observedPlayer = colliderSphere.GetComponent<ColliderScript>().player;
 
+        Debug.Log(checkPlayer);
+
         if (checkPlayer && !this.GetComponentInParent<CreatureController>().disableMovement)
         {
             EPrompt.GetComponent<Image>().enabled = true;
@@ -72,7 +74,7 @@ public class AbilitiesScript : MonoBehaviourPunCallbacks
             this.GetComponentInParent<CreatureController>().enabled = true;
             AnimEPrompt.GetComponent<Image>().enabled = false;
         }
-        else if (Input.GetKey(KeyCode.E) && CheckPlayer() && !this.GetComponentInParent<CreatureController>().disableMovement)
+        else if (Input.GetKey(KeyCode.E) && checkPlayer && !this.GetComponentInParent<CreatureController>().disableMovement)
         {
 
             if (Time.time - timer > timeToHold)
@@ -89,25 +91,25 @@ public class AbilitiesScript : MonoBehaviourPunCallbacks
         }
 
     }
-    private bool CheckPlayer()
+    private void CheckPlayer()
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit, 40f))
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 20f))
         {
          
            
             if ((hit.transform.tag == "Survivor" && hit.transform.GetComponent<HitByWeb>().frozen))
             {
                 observedPlayer = hit.transform.gameObject;
-                EPrompt.GetComponent<Image>().enabled = true;
-                return true;
+               // EPrompt.GetComponent<Image>().enabled = true;
+                checkPlayer = true; 
             }
             else
             {
-                EPrompt.GetComponent<Image>().enabled = false;
+                //WEPrompt.GetComponent<Image>().enabled = false;
             }
         }
-        return false;
+        checkPlayer = false;
     }
 
 

@@ -77,8 +77,8 @@ public class GameScript : MonoBehaviourPunCallbacks
             PV.RPC("OpenExitGates", RpcTarget.AllBuffered);
             gatesOpened = true; 
         }
-        Debug.Log(numPlayersInJail);
-        Debug.Log(PhotonNetwork.PlayerList.Length - 1);
+
+
         if ((PhotonNetwork.PlayerList.Length-1 == numPlayersInJail && inRoom && PhotonNetwork.PlayerList.Length != 1))
         {
             inRoom = false;

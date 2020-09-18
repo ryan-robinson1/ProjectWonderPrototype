@@ -8,29 +8,42 @@ public class ColliderScript : MonoBehaviour
     public GameObject player; 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject.transform.tag);
+
+        //Debug.Log(other.gameObject.name);
         if ((other.gameObject.transform.tag == "Survivor" && other.gameObject.transform.GetComponent<HitByWeb>().frozen))
         {
             Debug.Log("Made it in here");
             checkPlayer = true;
             player = other.gameObject;
         }
-    }
-    private void OnTriggerStay(Collider other)
-    {
-        Debug.Log(other.gameObject.transform.tag);
-        if (other.gameObject == player && !other.gameObject.transform.GetComponent<HitByWeb>().frozen)
+        else if ((other.gameObject.transform.tag == "Survivor" && !other.gameObject.transform.GetComponent<HitByWeb>().frozen))
         {
             checkPlayer = false;
+            player = other.gameObject;
         }
+    }
+    private void Update()
+    {
+
+    }
+
+
+    private void OnTriggerStay(Collider other)
+    {
+
         if (other.gameObject == player && other.gameObject.transform.GetComponent<HitByWeb>().frozen)
         {
             checkPlayer = true;
         }
+        else if (other.gameObject == player && !other.gameObject.transform.GetComponent<HitByWeb>().frozen)
+        {
+            checkPlayer = false;
+        }
+
+
     }
     private void OnTriggerExit(Collider other)
     {
-        Debug.Log(other.gameObject.transform.tag);
         if (other.gameObject == player)
         {
             checkPlayer = false;
