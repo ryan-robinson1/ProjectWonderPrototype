@@ -20,6 +20,7 @@ public class HitByWeb : MonoBehaviourPunCallbacks
     float runSpeed;
     float walkSpeed;
     float crouchSpeed;
+    FloatRange slideSpeed;
     PhotonView PV; 
    
 
@@ -47,12 +48,14 @@ public class HitByWeb : MonoBehaviourPunCallbacks
             runSpeed = this.GetComponent<PlayerMovement>().runSpeed;
             walkSpeed = this.GetComponent<PlayerMovement>().walkSpeed;
             crouchSpeed = this.GetComponent<PlayerMovement>().crouchSpeed;
+            slideSpeed = this.GetComponent<SlidingMovement>().slideSpeed;
 
             PV.RPC("changeToWebMaterial", RpcTarget.AllBuffered, true);
             // freeze player when hit by web
             this.GetComponent<PlayerMovement>().runSpeed = 0;
             this.GetComponent<PlayerMovement>().walkSpeed = 0;
             this.GetComponent<PlayerMovement>().crouchSpeed = 0;
+            this.GetComponent<SlidingMovement>().slideSpeed = new FloatRange(0,0);
             freezePlayer = false;
             frozen = true; 
            
@@ -63,6 +66,7 @@ public class HitByWeb : MonoBehaviourPunCallbacks
             this.GetComponent<PlayerMovement>().runSpeed = runSpeed;
             this.GetComponent<PlayerMovement>().walkSpeed = walkSpeed;
             this.GetComponent<PlayerMovement>().crouchSpeed = crouchSpeed;
+            this.GetComponent<SlidingMovement>().slideSpeed = slideSpeed; 
             PV.RPC("changeToWebMaterial", RpcTarget.AllBuffered, false);
             webTimeTracker = float.PositiveInfinity;
             frozen = false;

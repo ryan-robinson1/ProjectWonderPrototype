@@ -17,8 +17,8 @@ public class TeleportPlayer : MonoBehaviourPunCallbacks
     }
     private void OnTriggerEnter(Collider other)
     {
-       
-        if (other.gameObject.name == "SurvivorController(Clone)" && slot.transform.childCount > 0)
+        //&& 
+        if (other.gameObject.name == "SurvivorController(Clone)" )
         {
             setFreeView(other.gameObject);
             GameLogicPV.RPC("IncrementPlayersEscaped", RpcTarget.AllBuffered);

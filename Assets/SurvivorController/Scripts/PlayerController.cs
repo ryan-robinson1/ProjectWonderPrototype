@@ -163,7 +163,7 @@ public class PlayerController : MonoBehaviour
                 ChangeStatus(Status.idle);
 
         }
-        Debug.Log(stamina);
+
     }
 
     public bool shouldSprint()

@@ -16,12 +16,15 @@ public class GameScript : MonoBehaviourPunCallbacks
     public int keysPlaced;
     public int playersInJail;
     public int playersEscaped = 0;
-    public float timeToEscape = 10f;
+    float timeToEscape = 60f;
     public GameObject powerCrystalSlot1, powerCrystalSlot2;
     public GameObject teleporter;
-    public Text timer; 
+    public Text timer;
+    public Animator anim1;
+    public Animator anim2;
     PhotonView PV;
     bool inRoom = true;
+    bool gatesOpened = false; 
 
     bool switchedToEscape = false; 
     void Start()
@@ -68,6 +71,11 @@ public class GameScript : MonoBehaviourPunCallbacks
             inRoom = false;
             PV.RPC("LeaveRoom", RpcTarget.AllBuffered);
         }
+        if((powerCrystalSlot1.transform.childCount > 0 || powerCrystalSlot2.transform.childCount > 0) && gatesOpened == false)
+        {
+            PV.RPC("OpenExitGates", RpcTarget.AllBuffered);
+            gatesOpened = true; 
+        }
 
         keysPlaced = Lock.GetComponent<KeyDetector>().getKeysPlaced();
     }
@@ -85,5 +93,12 @@ public class GameScript : MonoBehaviourPunCallbacks
     public void IncrementPlayersEscaped()
     {
         playersEscaped++;
+    }
+    [PunRPC]
+    public void OpenExitGates()
+    {
+        Debug.Log("Opened Gates");
+        anim1.SetTrigger("Open");
+        anim2.SetTrigger("Open");
     }
 }
