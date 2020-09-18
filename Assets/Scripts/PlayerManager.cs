@@ -23,11 +23,11 @@ public class PlayerManager : MonoBehaviour
 
     void Awake()
     {
-        SpawnPoint1.x += random.Next(4);
-        SpawnPoint2.x += random.Next(4);
-        SpawnPoint3.x += random.Next(4);
-        SpawnPoint4.x += random.Next(4);
-        SpawnPoint5.x += random.Next(4);
+        SpawnPoint1.x += random.Next(10);
+        SpawnPoint2.x += random.Next(10);
+        SpawnPoint3.x += random.Next(10);
+        SpawnPoint4.x += random.Next(10);
+        SpawnPoint5.x += random.Next(10);
 
         spawnPoints.Add(SpawnPoint1);
         spawnPoints.Add(SpawnPoint2);

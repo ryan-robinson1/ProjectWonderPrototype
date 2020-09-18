@@ -28,7 +28,7 @@ public class TeleportPlayer : MonoBehaviourPunCallbacks
     public void setFreeView(GameObject player)
     {
         
-        HUD.SetActive(false);
+        //HUD.SetActive(false);
         player.transform.GetChild(0).GetChild(0).GetChild(0).transform.position = new Vector3(50,50,-95);
         player.transform.rotation = Quaternion.identity;
         player.GetComponent<GlobalMeshRemover>().enabled = true; 

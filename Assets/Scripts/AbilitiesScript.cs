@@ -19,8 +19,8 @@ public class AbilitiesScript : MonoBehaviourPunCallbacks
     public GameObject webprojectile;
     GameObject observedPlayer;
     GameObject EPrompt;
-    GameObject AnimEPrompt; 
-
+    GameObject AnimEPrompt;
+    public GameScript gameManager; 
     PhotonView PV;
     float timer = float.PositiveInfinity;
     public float webShootTimer = 0.0f;
@@ -34,12 +34,15 @@ public class AbilitiesScript : MonoBehaviourPunCallbacks
         PV = this.GetComponentInParent<PhotonView>();
         EPrompt = GameObject.FindGameObjectWithTag("ETag");
         AnimEPrompt = GameObject.FindGameObjectWithTag("AnimETag");
+        gameManager = GameObject.Find("GameManager").GetComponent<GameScript>();
 
     }
     void Update()
     {
         checkPlayer = colliderSphere.GetComponent<ColliderScript>().checkPlayer;
         observedPlayer = colliderSphere.GetComponent<ColliderScript>().player;
+
+        Debug.Log(checkPlayer);
 
         if (checkPlayer && !this.GetComponentInParent<CreatureController>().disableMovement)
         {
@@ -71,13 +74,14 @@ public class AbilitiesScript : MonoBehaviourPunCallbacks
             this.GetComponentInParent<CreatureController>().enabled = true;
             AnimEPrompt.GetComponent<Image>().enabled = false;
         }
-        else if (Input.GetKey(KeyCode.E) && CheckPlayer() && !this.GetComponentInParent<CreatureController>().disableMovement)
+        else if (Input.GetKey(KeyCode.E) && checkPlayer && !this.GetComponentInParent<CreatureController>().disableMovement)
         {
-            Debug.Log(Time.time - timer);
+
             if (Time.time - timer > timeToHold)
             {
                 timer = float.PositiveInfinity;
                observedPlayer.GetComponent<PhotonView>().RPC("TeleportPlayer", RpcTarget.AllBuffered,Random.value);
+                gameManager.GetComponent<PhotonView>().RPC("IncrementPlayersJailed", RpcTarget.AllBuffered);
                 this.GetComponentInParent<CreatureController>().enabled = true;
                 AnimEPrompt.GetComponent<Image>().enabled = false;
 
@@ -87,25 +91,25 @@ public class AbilitiesScript : MonoBehaviourPunCallbacks
         }
 
     }
-    private bool CheckPlayer()
+    private void CheckPlayer()
     {
         RaycastHit hit;
-        if (Physics.Raycast(transform.position, transform.forward, out hit, 40f))
+        if (Physics.Raycast(transform.position, transform.forward, out hit, 20f))
         {
          
            
             if ((hit.transform.tag == "Survivor" && hit.transform.GetComponent<HitByWeb>().frozen))
             {
                 observedPlayer = hit.transform.gameObject;
-                EPrompt.GetComponent<Image>().enabled = true;
-                return true;
+               // EPrompt.GetComponent<Image>().enabled = true;
+                checkPlayer = true; 
             }
             else
             {
-                EPrompt.GetComponent<Image>().enabled = false;
+                //WEPrompt.GetComponent<Image>().enabled = false;
             }
         }
-        return false;
+        checkPlayer = false;
     }
 
 

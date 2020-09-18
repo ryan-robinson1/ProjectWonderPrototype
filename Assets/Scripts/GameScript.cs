@@ -14,7 +14,7 @@ public class GameScript : MonoBehaviourPunCallbacks
     //Game State Variables
     public string gameState;
     public int keysPlaced;
-    public int playersInJail;
+    public int numPlayersInJail = 0;
     public int playersEscaped = 0;
     float timeToEscape = 60f;
     public GameObject powerCrystalSlot1, powerCrystalSlot2;
@@ -32,13 +32,13 @@ public class GameScript : MonoBehaviourPunCallbacks
         PV = this.GetComponent<PhotonView>();
         gameState = "Capture";
         keysPlaced = 0;
-        playersInJail = 0; 
+        numPlayersInJail = 0; 
     }
 
    
     void Update()
     {
-       
+      
         if (PowerCrystal.GetComponent<IsRemovedScript>().removed && !switchedToEscape)
         {
             gameState = "Escape";
@@ -55,6 +55,7 @@ public class GameScript : MonoBehaviourPunCallbacks
                 t.Seconds
                 );
             timer.text = timeLeft.Substring(1);
+           
             
             powerCrystalSlot1.tag = "CanPlace";
             powerCrystalSlot2.tag = "CanPlace";
@@ -77,6 +78,13 @@ public class GameScript : MonoBehaviourPunCallbacks
             gatesOpened = true; 
         }
 
+
+        if ((PhotonNetwork.PlayerList.Length-1 == numPlayersInJail && inRoom && PhotonNetwork.PlayerList.Length != 1))
+        {
+            inRoom = false;
+            PV.RPC("LeaveRoom", RpcTarget.AllBuffered);
+        }
+
         keysPlaced = Lock.GetComponent<KeyDetector>().getKeysPlaced();
     }
    
@@ -94,6 +102,18 @@ public class GameScript : MonoBehaviourPunCallbacks
     {
         playersEscaped++;
     }
+    [PunRPC]
+    public void IncrementPlayersJailed()
+    {
+        numPlayersInJail++;
+    }
+    [PunRPC]
+    public void DecrementPlayersJailed()
+    {
+        numPlayersInJail--; 
+    }
+
+
     [PunRPC]
     public void OpenExitGates()
     {

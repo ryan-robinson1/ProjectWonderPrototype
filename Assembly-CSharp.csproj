@@ -65,7 +65,9 @@
   <ItemGroup>
     <Compile Include="Assets\BarrelTransformUpdater.cs" />
     <Compile Include="Assets\CameraSmoother.cs" />
+    <Compile Include="Assets\CatchPlayerIfTooLow.cs" />
     <Compile Include="Assets\ColliderScript.cs" />
+    <Compile Include="Assets\CollisionDetector.cs" />
     <Compile Include="Assets\FastIK\Scripts\FastIK\FastIKCCD.cs" />
     <Compile Include="Assets\FastIK\Scripts\FastIK\FastIKFabric.cs" />
     <Compile Include="Assets\FastIK\Scripts\FastIK\FastIKLook.cs" />
@@ -74,6 +76,7 @@
     <Compile Include="Assets\FastIK\Scripts\Sample\SampleSinMover.cs" />
     <Compile Include="Assets\HitByWeb.cs" />
     <Compile Include="Assets\OpenDungeon.cs" />
+    <Compile Include="Assets\PlaneCollider.cs" />
     <Compile Include="Assets\ProbuilderStuff\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\ProbuilderStuff\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\ProbuilderStuff\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -109,6 +112,8 @@
     <Compile Include="Assets\ProbuilderStuff\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
     <Compile Include="Assets\ProbuilderStuff\TextMesh Pro\Examples &amp; Extras\Scripts\WarpTextExample.cs" />
     <Compile Include="Assets\ProbuilderStuff\Tutorial_Info\Scripts\Readme.cs" />
+    <Compile Include="Assets\ResetTags.cs" />
+    <Compile Include="Assets\SafeZoneDetector.cs" />
     <Compile Include="Assets\Scripts\AbilitiesScript.cs" />
     <Compile Include="Assets\Scripts\CreatureController.cs" />
     <Compile Include="Assets\Scripts\GameScript.cs" />
@@ -158,6 +163,7 @@
     <Compile Include="Assets\SurvivorController\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Teleport.cs" />
     <Compile Include="Assets\TempScript.cs" />
+    <Compile Include="Assets\VoidNet.cs" />
     <Compile Include="Assets\WebCaptureScript.cs" />
     <Compile Include="Assets\__Global\FloatHelper.cs" />
     <Compile Include="Assets\__Global\GameObjectHelper.cs" />
