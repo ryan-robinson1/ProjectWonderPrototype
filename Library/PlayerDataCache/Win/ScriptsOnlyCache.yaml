@@ -39,8 +39,6 @@ ScriptsOnlyBuild:
     - Teleport
     - TeleportPlayer
     - WebCaptureScript
-    PhotonUnityNetworking.Editor.dll:
-    - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonTransformView
     - Photon.Pun.PhotonView
