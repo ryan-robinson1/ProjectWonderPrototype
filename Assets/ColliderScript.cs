@@ -23,6 +23,10 @@ public class ColliderScript : MonoBehaviour
         {
             checkPlayer = false;
         }
+        if (other.gameObject == player && other.gameObject.transform.GetComponent<HitByWeb>().frozen)
+        {
+            checkPlayer = true;
+        }
     }
     private void OnTriggerExit(Collider other)
     {

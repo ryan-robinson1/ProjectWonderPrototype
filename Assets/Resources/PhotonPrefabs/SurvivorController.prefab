@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: -8044863637028607437}
   - component: {fileID: 4488289128549423303}
   - component: {fileID: 4161035824239344280}
+  - component: {fileID: 7121476039954196771}
   m_Layer: 0
   m_Name: SurvivorController
   m_TagString: Survivor
@@ -304,6 +305,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00aed28e0c6c0154c91f55efc817a132, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &7121476039954196771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1498368170785993435}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ffbdbe396409234aa1c78e03b35f5fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &2504870735385081345

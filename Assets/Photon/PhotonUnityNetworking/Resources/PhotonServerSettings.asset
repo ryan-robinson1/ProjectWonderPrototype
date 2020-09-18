@@ -83,6 +83,10 @@ MonoBehaviour:
   - updateSpawnDictionary
   - OpenExitGates
   - resetTag
+  - IncrementPlayersInJail
+  - changePlayersInJail
+  - DecrementPlayersJailed
+  - IncrementPlayersJailed
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 0

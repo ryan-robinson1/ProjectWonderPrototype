@@ -19,8 +19,8 @@ public class AbilitiesScript : MonoBehaviourPunCallbacks
     public GameObject webprojectile;
     GameObject observedPlayer;
     GameObject EPrompt;
-    GameObject AnimEPrompt; 
-
+    GameObject AnimEPrompt;
+    public GameScript gameManager; 
     PhotonView PV;
     float timer = float.PositiveInfinity;
     public float webShootTimer = 0.0f;
@@ -34,6 +34,7 @@ public class AbilitiesScript : MonoBehaviourPunCallbacks
         PV = this.GetComponentInParent<PhotonView>();
         EPrompt = GameObject.FindGameObjectWithTag("ETag");
         AnimEPrompt = GameObject.FindGameObjectWithTag("AnimETag");
+        gameManager = GameObject.Find("GameManager").GetComponent<GameScript>();
 
     }
     void Update()
@@ -73,11 +74,12 @@ public class AbilitiesScript : MonoBehaviourPunCallbacks
         }
         else if (Input.GetKey(KeyCode.E) && CheckPlayer() && !this.GetComponentInParent<CreatureController>().disableMovement)
         {
-            Debug.Log(Time.time - timer);
+
             if (Time.time - timer > timeToHold)
             {
                 timer = float.PositiveInfinity;
                observedPlayer.GetComponent<PhotonView>().RPC("TeleportPlayer", RpcTarget.AllBuffered,Random.value);
+                gameManager.GetComponent<PhotonView>().RPC("IncrementPlayersJailed", RpcTarget.AllBuffered);
                 this.GetComponentInParent<CreatureController>().enabled = true;
                 AnimEPrompt.GetComponent<Image>().enabled = false;
 

@@ -477,6 +477,7 @@ MonoBehaviour:
   barrel: {fileID: 2200790934888670275}
   webprojectile: {fileID: 7468735444938351928, guid: 9f994491c1603ec4f960f014766a2332,
     type: 3}
+  gameManager: {fileID: 0}
   webShootTimer: 1.5
   timeToHold: 2
   colliderSphere: {fileID: 1340185313907293084}
