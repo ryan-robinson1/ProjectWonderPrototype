@@ -293,8 +293,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0efe1ed2c572b4c449b8c205f0404535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TPPoint2: {x: -114, y: -2, z: -216}
-  TPPoint3: {x: 214, y: -2, z: 100}
 --- !u!1 &2504870735385081345
 GameObject:
   m_ObjectHideFlags: 0

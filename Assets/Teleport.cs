@@ -5,8 +5,8 @@ using Photon.Pun;
 
 public class Teleport : MonoBehaviour
 {
-    public Vector3 TPPoint2 = new Vector3(-114, -2, -216);
-    public Vector3 TPPoint3 = new Vector3(214, -2, 100);
+     Vector3 TPPoint2 = new Vector3(480, -35, -800);
+     Vector3 TPPoint3 = new Vector3(28, -23, -179);
     
     // Start is called before the first frame update
     void Start()
