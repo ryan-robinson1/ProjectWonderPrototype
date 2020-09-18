@@ -1,7 +1,5 @@
 ScriptsOnlyBuild:
   usedScripts:
-    Assembly-CSharp-Editor.dll:
-    - TransformInspector
     Assembly-CSharp.dll:
     - AbilitiesScript
     - AnimateCameraLevel
@@ -33,6 +31,7 @@ ScriptsOnlyBuild:
     - PlayerManager
     - PlayerMovement
     - ProceduralLegPlacement
+    - ResetTags
     - RigidBodySync
     - RoomManager
     - Roomlistitem
@@ -41,10 +40,6 @@ ScriptsOnlyBuild:
     - Teleport
     - TeleportPlayer
     - WebCaptureScript
-    PhotonUnityNetworking.Editor.dll:
-    - Photon.Pun.PhotonTransformViewEditor
-    - Photon.Pun.PhotonViewInspector
-    - Photon.Pun.PunSceneSettings
     PhotonUnityNetworking.dll:
     - Photon.Pun.PhotonTransformView
     - Photon.Pun.PhotonView
@@ -320,6 +315,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 14346}
     - Class: 114
       Script: {instanceID: 21684}
+    - Class: 114
+      Script: {instanceID: 290016}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 120
@@ -1832,6 +1829,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ResetTags
   platform: 5
   scenePathNames:
   - Assets/Scenes/Menu.unity

@@ -172,10 +172,14 @@ public class PickUpScript : MonoBehaviourPunCallbacks
         currentObject.transform.parent = placeableSurface.transform;
         foreach (Transform t in currentObject.transform)
         {
+
             t.gameObject.tag = "Untagged";
+            
         }
+
         currentObject.tag = "Untagged";
         placeableSurface.tag = "Untagged";
+        
         if (placeableSurface.transform.parent.transform.parent.name == "Pedastools")
         {
             placeableSurface.GetComponentInParent<PhotonView>().RPC("IncrementSlotNum", RpcTarget.AllBuffered);

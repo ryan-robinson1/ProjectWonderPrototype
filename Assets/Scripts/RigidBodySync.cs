@@ -97,4 +97,5 @@ public class RigidBodySync : MonoBehaviourPun, IPunObservable
        transform.parent = null;
        transform.localScale = rescaleVector;
     }
+   
 }

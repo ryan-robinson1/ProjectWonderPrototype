@@ -55,6 +55,7 @@ public class GameScript : MonoBehaviourPunCallbacks
                 t.Seconds
                 );
             timer.text = timeLeft.Substring(1);
+           
             
             powerCrystalSlot1.tag = "CanPlace";
             powerCrystalSlot2.tag = "CanPlace";
