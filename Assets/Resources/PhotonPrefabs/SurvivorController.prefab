@@ -274,9 +274,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   webTimer: 5
+  frozenCooldownTimer: 6
   freezePlayer: 0
   webbedMaterial: {fileID: 2100000, guid: 29f6ae854f948bc44a1929152721a9bd, type: 2}
   defaultMaterial: {fileID: 2100000, guid: 179ceebfde0250c4a8e2b8f403353e0c, type: 2}
+  coolDownMaterial: {fileID: 2100000, guid: f8123413c5990d44fbb5cc8357c4e4c5, type: 2}
   web: {fileID: 0}
   frozen: 0
 --- !u!114 &4488289128549423303

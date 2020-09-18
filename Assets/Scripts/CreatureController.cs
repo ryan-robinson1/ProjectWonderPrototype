@@ -61,7 +61,7 @@ public class CreatureController : MonoBehaviourPunCallbacks, IOnEventCallback {
         }
         else
         {
-
+            gameObject.tag = "LocalHunter";
         }
     }
 
@@ -92,7 +92,7 @@ public class CreatureController : MonoBehaviourPunCallbacks, IOnEventCallback {
             }*/
             Move();
             Look();
-            Debug.Log("hello");
+            
         }
 
         if (dynamicGait) {

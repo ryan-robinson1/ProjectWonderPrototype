@@ -16,6 +16,8 @@ TagManager:
   - AnimETag
   - PauseMenu
   - HUD
+  - Camera
+  - LocalHunter
   layers:
   - Default
   - TransparentFX

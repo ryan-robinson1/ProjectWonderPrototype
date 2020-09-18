@@ -76,6 +76,10 @@ MonoBehaviour:
   - TeleportPlayer
   - CloseDungeonDoor
   - OpenDungeonDoor
+  - Collide
+  - SetCooldwonTimer
+  - SetCooldownTimer
+  - changeToCooldownMaterial
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 0

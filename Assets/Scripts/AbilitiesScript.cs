@@ -25,7 +25,9 @@ public class AbilitiesScript : MonoBehaviourPunCallbacks
     float timer = float.PositiveInfinity;
     public float webShootTimer = 0.0f;
     float webTimer = 0; 
-    public float timeToHold = 1.5f; 
+    public float timeToHold = 1.5f;
+    bool checkPlayer = false;
+    public GameObject colliderSphere; 
 
     private void Start()
     {
@@ -36,14 +38,24 @@ public class AbilitiesScript : MonoBehaviourPunCallbacks
     }
     void Update()
     {
+        checkPlayer = colliderSphere.GetComponent<ColliderScript>().checkPlayer;
+        observedPlayer = colliderSphere.GetComponent<ColliderScript>().player;
 
+        if (checkPlayer && !this.GetComponentInParent<CreatureController>().disableMovement)
+        {
+            EPrompt.GetComponent<Image>().enabled = true;
+        }
+        else if(!checkPlayer && !this.GetComponentInParent<CreatureController>().disableMovement)
+        {
+            EPrompt.GetComponent<Image>().enabled = false;
+        }
         if (Input.GetMouseButtonDown(0) && !this.GetComponentInParent<CreatureController>().disableMovement && Time.time - webTimer > webShootTimer) 
         {
             PV.RPC("ShootWeb", RpcTarget.AllBuffered);
             webShootTimer = 0.4f;
             webTimer = Time.time;
         }
-        if (Input.GetKeyDown(KeyCode.E) && CheckPlayer())
+        if (Input.GetKeyDown(KeyCode.E) && checkPlayer && !this.GetComponentInParent<CreatureController>().disableMovement)
         {
             timer = Time.time;
             this.GetComponentInParent<CreatureController>().enabled = false;
@@ -53,7 +65,7 @@ public class AbilitiesScript : MonoBehaviourPunCallbacks
             
 
         }
-        else if ((Input.GetKeyUp(KeyCode.E) && Time.time - timer < timeToHold && timer != float.PositiveInfinity )|| !CheckPlayer() && !this.GetComponentInParent<CreatureController>().disableMovement)
+        else if ((Input.GetKeyUp(KeyCode.E) && Time.time - timer < timeToHold && timer != float.PositiveInfinity )|| !checkPlayer && !this.GetComponentInParent<CreatureController>().disableMovement)
         {
             timer = float.PositiveInfinity;
             this.GetComponentInParent<CreatureController>().enabled = true;
