@@ -1,5 +1,7 @@
 ScriptsOnlyBuild:
   usedScripts:
+    Assembly-CSharp-Editor.dll:
+    - ReadmeEditor
     Assembly-CSharp.dll:
     - AbilitiesScript
     - AnimateCameraLevel
@@ -34,6 +36,7 @@ ScriptsOnlyBuild:
     - PlayerManager
     - PlayerMovement
     - ProceduralLegPlacement
+    - Readme
     - ResetTags
     - RigidBodySync
     - RoomManager
@@ -1882,4 +1885,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Game.unity
   - Assets/Scenes/WonderMapPrototype.unity
-  playerPath: C:/Users/Maxfi/OneDrive/Desktop/completedPrototype/ProjectWL.exe
+  playerPath: C:/Users/ryanr/Desktop/Code/Unity/PWBuilds/ProjectWL.exe
